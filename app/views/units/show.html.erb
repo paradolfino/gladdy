@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @unit.name %>
+</p>
+
+<p>
+  <strong>Hp:</strong>
+  <%= @unit.hp %>
+</p>
+
+<p>
+  <strong>Attack:</strong>
+  <%= @unit.attack %>
+</p>
+
+<p>
+  <strong>Defense:</strong>
+  <%= @unit.defense %>
+</p>
+
+<p>
+  <strong>Agility:</strong>
+  <%= @unit.agility %>
+</p>
+
+<p>
+  <strong>Xp:</strong>
+  <%= @unit.xp %>
+</p>
+
+<p>
+  <strong>Points:</strong>
+  <%= @unit.points %>
+</p>
+
+<p>
+  <strong>Avatar:</strong>
+  <%= @unit.avatar %>
+</p>
+
+<p>
+  <strong>Ladder:</strong>
+  <%= @unit.ladder_id %>
+</p>
+
+<%= link_to 'Edit', edit_unit_path(@unit) %> |
+<%= link_to 'Back', units_path %>

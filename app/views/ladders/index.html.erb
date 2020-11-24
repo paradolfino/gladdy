@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ladders</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Size</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ladders.each do |ladder| %>
+      <tr>
+        <td><%= ladder.name %></td>
+        <td><%= ladder.size %></td>
+        <td><%= ladder.description %></td>
+        <td><%= link_to 'Show', ladder %></td>
+        <td><%= link_to 'Edit', edit_ladder_path(ladder) %></td>
+        <td><%= link_to 'Destroy', ladder, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ladder', new_ladder_path %>

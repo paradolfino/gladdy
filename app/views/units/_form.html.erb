@@ -1,0 +1,62 @@
+<%= form_with(model: unit, local: true) do |form| %>
+  <% if unit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(unit.errors.count, "error") %> prohibited this unit from being saved:</h2>
+
+      <ul>
+        <% unit.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hp %>
+    <%= form.text_field :hp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :attack %>
+    <%= form.text_field :attack %>
+  </div>
+
+  <div class="field">
+    <%= form.label :defense %>
+    <%= form.text_field :defense %>
+  </div>
+
+  <div class="field">
+    <%= form.label :agility %>
+    <%= form.text_field :agility %>
+  </div>
+
+  <div class="field">
+    <%= form.label :xp %>
+    <%= form.text_field :xp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :points %>
+    <%= form.number_field :points %>
+  </div>
+
+  <div class="field">
+    <%= form.label :avatar %>
+    <%= form.text_field :avatar %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ladder_id %>
+    <%= form.text_field :ladder_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

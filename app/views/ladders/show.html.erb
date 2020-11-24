@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @ladder.name %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @ladder.size %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @ladder.description %>
+</p>
+
+<%= link_to 'Edit', edit_ladder_path(@ladder) %> |
+<%= link_to 'Back', ladders_path %>
